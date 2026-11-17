@@ -1,0 +1,108 @@
+:root {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  color: #f7f8fa;
+  background: #050709;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 50% 42%, rgba(8, 27, 34, 0.78), transparent 62%),
+    #050709;
+}
+
+button { font: inherit; }
+
+.invitation-shell {
+  width: min(100%, 660px);
+  margin-inline: auto;
+  padding: max(12px, env(safe-area-inset-top)) 14px max(24px, env(safe-area-inset-bottom));
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.invitation {
+  position: relative;
+  width: 100%;
+  display: block;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 0 56px rgba(37, 244, 238, 0.08), 0 14px 45px rgba(0, 0, 0, 0.44);
+}
+
+#invitation-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #050709;
+}
+
+
+.loading {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: #050709;
+  color: #d5e1e5;
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  gap: 10px;
+}
+
+.action {
+  min-width: 110px;
+  min-height: 48px;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #050709;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: filter 150ms ease, transform 150ms ease, opacity 150ms ease;
+}
+
+.action:hover:not(:disabled) { filter: brightness(1.1); transform: translateY(-1px); }
+.action:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+.action:disabled { cursor: wait; opacity: 0.56; }
+.action--primary { background: #25f4ee; }
+.action--secondary { background: #14232a; color: #f7f8fa; border-color: #36515c; }
+
+.progress {
+  display: grid;
+  gap: 7px;
+  color: #f7f8fa;
+  font-size: 12px;
+  text-align: center;
+}
+
+[hidden] { display: none !important; }
+
+.progress-track { height: 3px; overflow: hidden; background: #253137; }
+.progress-track span { display: block; width: 0; height: 100%; background: #25f4ee; transition: width 100ms linear; }
+.notice { min-height: 16px; margin: 0; color: #a9bcc2; font-size: 11px; line-height: 1.45; text-align: center; }
+
+@media (min-width: 760px) {
+  .invitation-shell { width: min(100%, 530px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+}

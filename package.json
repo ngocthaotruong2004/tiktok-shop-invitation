@@ -1,0 +1,22 @@
+{
+  "name": "tiktok-shop-vietnam-invitation",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "gif:export": "node scripts/export-gif.mjs",
+    "check:effects": "node scripts/check-effects.mjs"
+  },
+  "dependencies": {
+    "omggif": "^1.0.10"
+  },
+  "devDependencies": {
+    "@napi-rs/canvas": "^1.1.1",
+    "gifenc": "^1.0.3",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5"
+  }
+}

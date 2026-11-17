@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/invite", "destination": "/" },
+    { "source": "/brand&tiktok", "destination": "/" },
+    { "source": "/test", "destination": "/" },
+    { "source": "/testbrand", "destination": "/" }
+  ]
+}

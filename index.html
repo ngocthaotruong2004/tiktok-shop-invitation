@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#050709" />
+    <meta name="description" content="Thiệp mời tham gia sự kiện Tiệc Tổng Kết Chương Trình TikTok Shop: Hội Chủ Chốt 2026." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:title" content="Thân mời | TikTok Shop Vietnam" />
+    <meta property="og:description" content="Hẹn gặp bạn tại sự kiện giao lưu TikTok Shop Vietnam ngày 20.11.2026." />
+    <meta property="og:image" content="/og-image.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <title>Thân mời | TikTok Shop Vietnam</title>
+  </head>
+  <body>
+    <main class="invitation-shell">
+      <section class="invitation" aria-label="Thiệp mời sự kiện TikTok Shop Vietnam">
+        <canvas id="invitation-canvas" width="1080" height="1920" aria-label="Thiệp mời TikTok Shop Vietnam"></canvas>
+        <div class="loading" id="loading" role="status">Đang chuẩn bị thiệp mời…</div>
+      </section>
+      <nav class="actions" aria-label="Tải thiệp mời">
+        <button class="action action--secondary" id="replay" type="button" disabled>Phát lại hiệu ứng</button>
+        <button class="action action--primary" id="download" type="button" disabled>Tải thiệp</button>
+      </nav>
+      <div class="progress" id="progress" role="status" aria-live="polite" hidden>
+        <span id="progress-label">Đang tạo thiệp…</span>
+        <div class="progress-track"><span id="progress-fill"></span></div>
+      </div>
+      <p class="notice" id="notice" role="status" aria-live="polite"></p>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

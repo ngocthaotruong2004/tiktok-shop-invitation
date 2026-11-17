@@ -1,0 +1,1 @@
+Đặt các PNG thiết kế tại đây: `logo.png`, `logo_invitation.png`, `backgroud_invitation.png`, `ribbon-top.png`, `ribbon-bottom.png` và `skyline.png`.
